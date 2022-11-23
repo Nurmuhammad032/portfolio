@@ -1,26 +1,35 @@
-html,
-body {
-  padding: 0;
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
-}
+@import url("https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&display=swap");
 
-a {
-  color: inherit;
-  text-decoration: none;
-}
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
-* {
-  box-sizing: border-box;
-}
-
-@media (prefers-color-scheme: dark) {
-  html {
-    color-scheme: dark;
-  }
+@layer base {
   body {
-    color: white;
-    background: black;
+    @apply bg-white  dark:bg-customInk font-Space;
+  }
+}
+
+@layer components {
+  .main-container {
+    @apply xl:max-w-[1400px] mx-auto px-2;
+  }
+  .center-mode {
+    @apply flex items-center justify-center;
+  }
+
+  .app__btn {
+    @apply border-2 mt-28 ml-[10px] relative border-customBlue rounded-[11px] w-[222px] h-[63px];
+  }
+
+  .app__btn button {
+    @apply bg-customBlue transition-all absolute w-full h-full top-0 -translate-x-[10px] translate-y-[10px] left-0 rounded-lg border-2 border-customBlue text-2xl text-white;
+  }
+  .app__btn:active button {
+    @apply translate-x-0 -translate-y-0;
+  }
+
+  .app__icon {
+    @apply dark:fill-[#D1D5DB] fill-customBlack;
   }
 }
