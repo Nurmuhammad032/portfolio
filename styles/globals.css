@@ -11,6 +11,10 @@
 }
 
 @layer components {
+  .app__section {
+    @apply min-h-screen pt-24 pb-[15rem];
+  }
+
   .main-container {
     @apply xl:max-w-[1400px] mx-auto px-2;
   }
@@ -18,18 +22,26 @@
     @apply flex items-center justify-center;
   }
 
-  .app__btn {
+  .app__link {
     @apply border-2 mt-28 ml-[10px] relative border-customBlue rounded-[11px] w-[222px] h-[63px];
   }
 
-  .app__btn button {
-    @apply bg-customBlue transition-all absolute w-full h-full top-0 -translate-x-[10px] translate-y-[10px] left-0 rounded-lg border-2 border-customBlue text-2xl text-white;
+  .app__link a {
+    @apply bg-customBlue flex text-center items-center justify-center transition-all absolute w-full h-full top-0 -translate-x-[10px] translate-y-[10px] left-0 rounded-lg border-2 border-customBlue text-2xl text-white;
   }
-  .app__btn:active button {
+  .app__link:active a {
     @apply translate-x-0 -translate-y-0;
   }
 
   .app__icon {
     @apply dark:fill-[#D1D5DB] fill-customBlack;
+  }
+
+  .heading {
+    @apply mb-4 text-customBlack dark:text-white xl:text-6xl lg:text-4xl text-3xl font-bold;
+  }
+
+  .info {
+    @apply text-customBlack dark:text-white xl:text-2xl text-[16px] leading-9;
   }
 }

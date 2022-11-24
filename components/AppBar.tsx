@@ -29,14 +29,14 @@ const AppBar = () => {
       style={{
         boxShadow: "-24px 24px 64px #111827",
       }}
-      className="fixed py-3 rounded-3xl  border border-[#374151] dark:bg-[#111827] bottom-14 left-1/2 -translate-x-1/2 px-[62px] w-[85%]"
+      className="fixed py-3 z-50 xl:rounded-3xl md:rounded-2xl rounded-lg  border border-[#374151] dark:bg-[#111827] bottom-14 left-1/2 -translate-x-1/2 xl:px-[62px] md:px-[45px] px-2 w-[85%]"
     >
       <div className="flex items-center justify-between">
         {links?.map(({ label, value }) => (
           <Link
             href={value}
             key={value}
-            className="xl:h-[104px] xl:w-[104px] bg-customInk rounded-2xl center-mode"
+            className="xl:h-[104px] xl:w-[104px] lg:w-[80px] lg:h-[80px] md:w-[50px] lg:p-0 p-2 w-[32px] h-[32px] md:h-[50px] bg-customInk xl:rounded-2xl md:rounded-xl rounded-lg center-mode"
           >
             {label}
           </Link>
