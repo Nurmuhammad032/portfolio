@@ -6,7 +6,7 @@
 
 @layer base {
   body {
-    @apply bg-white  dark:bg-customInk font-Space;
+    @apply bg-white  dark:bg-customInk dark:text-white text-customBlack font-Space;
   }
 }
 
@@ -23,7 +23,7 @@
   }
 
   .app__link {
-    @apply border-2 mt-28 ml-[10px] relative border-customBlue rounded-[11px] w-[222px] h-[63px];
+    @apply border-2 ml-[10px] relative border-customBlue rounded-[11px] w-[222px] h-[63px];
   }
 
   .app__link a {
@@ -43,5 +43,13 @@
 
   .info {
     @apply text-customBlack dark:text-white xl:text-2xl text-[16px] leading-9;
+  }
+
+  .project__info-wrapper{
+    @apply lg:flex justify-between 
+  }
+
+  .project__info-wrapper:nth-child(odd) {
+    @apply flex-row-reverse
   }
 }

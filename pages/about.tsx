@@ -7,11 +7,11 @@ const about = () => {
       <div className="main-container">
         <div className="mb-[46px]">
           <h1 className="heading">About Me 👨‍</h1>
-          <p className=" text-customBlack dark:text-white text-2xl">
+          <p className="text-2xl">
             A brief intro to who i am and how i do what i do:
           </p>
         </div>
-        <h1 className=" text-customBlack dark:text-white text-2xl">
+        <h1 className="text-2xl">
           I am <span className="font-bold text-[40px]">Nurmuhammad</span>
         </h1>
 
@@ -28,7 +28,9 @@ const about = () => {
             best for your business.
           </p>
         </div>
+        <div className="mt-28">
         <LinkComponent url="contact" text="Say Hello" />
+        </div>
       </div>
     </section>
   );

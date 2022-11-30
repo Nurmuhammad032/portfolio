@@ -8,7 +8,7 @@ export default function Home() {
     <section className="app__section">
       <div>
         <div className="main-container">
-          <h1 className="dark:text-white xl:text-[60px] lg:text-[50px] md:text-[36px] text-[28px] font-bold xl:leading-[97px] lg:leading-[77px] md:leading-[57px] leading-[42px] text-customBlack">
+          <h1 className="xl:text-[60px] lg:text-[50px] md:text-[36px] text-[28px] font-bold xl:leading-[97px] lg:leading-[77px] md:leading-[57px] leading-[42px]">
             Hello!👋🏻 <br /> My name is Ololade <br /> I'm a Frontend{" "}
             <span
               className="font-bold"
@@ -22,12 +22,13 @@ export default function Home() {
               Developer
             </span>
           </h1>
-          <p className="lg:text-2xl text-xs dark:text-white text-customBlack mt-7">
+          <p className="lg:text-2xl text-xs mt-7">
             Let me help you grow your business and make your product look pretty
             while at it{" "}
           </p>
-
-          <LinkComponent url={"contact"} text="Say Hello" />
+          <div className="mt-28">
+            <LinkComponent url={"contact"} text="Say Hello" />
+          </div>
         </div>
       </div>
     </section>
