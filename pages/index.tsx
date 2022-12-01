@@ -1,11 +1,15 @@
-import Head from "next/head";
-import Image from "next/image";
-import Link from "next/link";
 import { LinkComponent } from "../components";
+import { motion } from "framer-motion";
 
 export default function Home() {
   return (
-    <section className="app__section">
+    <motion.section
+      className="app__section"
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      exit={{ opacity: 0 }}
+      transition={{ duration: 0.2 }}
+    >
       <div>
         <div className="main-container">
           <h1 className="xl:text-[60px] lg:text-[50px] md:text-[36px] text-[28px] font-bold xl:leading-[97px] lg:leading-[77px] md:leading-[57px] leading-[42px]">
@@ -31,6 +35,6 @@ export default function Home() {
           </div>
         </div>
       </div>
-    </section>
+    </motion.section>
   );
 }

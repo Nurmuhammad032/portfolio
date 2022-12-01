@@ -53,25 +53,41 @@
     @apply flex-row-reverse;
   }
 
+  .project__title {
+    @apply xl:text-[40px] lg:text-4xl md:text-2xl text-lg font-bold mb-6;
+  }
+
   .card-flag {
     @apply relative transition-all w-8 h-16 px-2 py-3 bg-customInk hover:bg-[#e37575] cursor-pointer;
+  }
+
+  .contact__input-wrapper {
+    @apply mb-5 flex flex-col;
+  }
+
+  .contact__input-wrapper label {
+    @apply text-2xl mb-3 text-[#1e205e];
+  }
+  .contact__input-wrapper input,
+  .contact__input-wrapper textarea {
+    @apply text-[20px] border-[#e1e1e9] rounded-md px-2 py-2 border-2 focus:border-[#0c75ff] outline-none text-[#1e205e];
+  }
+  .contact__input-wrapper textarea {
+    @apply max-h-[7rem] min-h-[6rem] bg-[#f9f9fb];
+  }
+
+  .contact-info {
+    @apply flex space-x-6 items-center mb-5 w-2/3 py-3 px-3 rounded-lg border-2 border-transparent transition-all hover:border-[#0c75ff];
+  }
+
+  .contact-social {
+    @apply w-14 h-14 transition-all cursor-pointer hover:bg-[#0c75ff] rounded-full;
   }
 }
 
 .card-flag {
   clip-path: polygon(0 0, 100% 0, 100% 99%, 48% 75%, 0 100%);
 }
-
-/* .project__card-wrapper::after {
-  content: "";
-  position: absolute;
-  left: 0;
-  right: 0;
-  top: 0;
-  width: 100%;
-  height: 100%;
-  background: rgba(0, 0, 0, 0.3);
-} */
 
 .project__card-wrapper:hover {
   background: rgba(0, 0, 0, 0.3);

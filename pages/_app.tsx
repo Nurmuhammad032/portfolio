@@ -2,8 +2,12 @@ import "../styles/globals.css";
 import { useState, useEffect } from "react";
 import type { AppProps } from "next/app";
 import { AppBar } from "../components";
+import { AnimatePresence } from "framer-motion";
+import { useRouter } from "next/router";
 
 export default function App({ Component, pageProps }: AppProps) {
+  const router = useRouter();
+
   const [theme, setTheme] = useState("");
 
   useEffect(() => {
@@ -25,8 +29,12 @@ export default function App({ Component, pageProps }: AppProps) {
   return (
     <div>
       <AppBar />
-      <h1 className=" text-customBlue text-2xl font-bold absolute top-6 left-[73px]">Brand</h1>
-      <Component {...pageProps} />
+      <h1 className=" text-customBlue text-2xl font-bold absolute top-6 left-[73px]">
+        Brand
+      </h1>
+      <AnimatePresence>
+        <Component key={router.route} {...pageProps} />
+      </AnimatePresence>
     </div>
   );
 }

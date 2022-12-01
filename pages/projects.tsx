@@ -1,6 +1,7 @@
 import React from "react";
 import { LinkComponent, Project } from "../components";
 import { ProjectType } from "../types";
+import { motion } from "framer-motion";
 import {
   footerProject,
   projectArray,
@@ -8,13 +9,19 @@ import {
 
 const projects = () => {
   return (
-    <section className="app__section">
+    <motion.section
+      className="app__section"
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      exit={{ opacity: 0 }}
+      transition={{ duration: 0.2 }}
+    >
       <div className="main-container">
         <div className="mb-16">
           <h1 className="heading">Projects </h1>
           <p className="info mt-6">
             Some things i've been working on in the past few years:
-          </p>
+          </p>  
         </div>
         <div>
           {projectArray.map((pr: ProjectType, i) => (
@@ -26,9 +33,7 @@ const projects = () => {
               </div>
               <div className="lg:w-[48%] lg:flex flex-col h-auto justify-evenly">
                 <div>
-                  <h1 className="xl:text-[40px] lg:text-4xl md:text-2xl text-lg font-bold mb-6">
-                    {pr.title}
-                  </h1>
+                  <h1 className="project__title">{pr.title}</h1>
                   <p className="text-[16px]">{pr.info}</p>
                 </div>
                 <div className="mt-12 lg:mt-0">
@@ -41,13 +46,16 @@ const projects = () => {
             </div>
           ))}
         </div>
-        <div className="flex flex-wrap justify-evenly">
-          {footerProject.map((item, i) => (
-            <Project data={item} key={i} />
-          ))}
+        <div>
+          <h1 className="project__title mt-7 mb-7">Keep Scrolling</h1>
+          <div className="flex flex-wrap justify-evenly">
+            {footerProject.map((item, i) => (
+              <Project data={item} key={i} />
+            ))}
+          </div>
         </div>
       </div>
-    </section>
+    </motion.section>
   );
 };
 

@@ -6,7 +6,7 @@ import { GoBrowser } from "react-icons/go";
 const Project = ({ data: { imgUrl, githubLink, link } }) => {
   return (
     <div className="w-full mr-3 mb-3 md:w-[24rem] h-[16rem] overflow-hidden rounded-[10px] relative project__card-wrapper">
-      <a href={link} className="">
+      <a href={link}>
         <img
           src={`${imgUrl}`}
           alt="project"
