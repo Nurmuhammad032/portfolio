@@ -8,7 +8,7 @@ interface Props {
 const LinkComponent = ({ url, text }: Props) => {
   return (
     <div className="app__link">
-      <Link href={`/${url}`}>{text}</Link>
+      <Link href={`${url}`}>{text}</Link>
     </div>
   );
 };

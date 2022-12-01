@@ -45,11 +45,51 @@
     @apply text-customBlack dark:text-white xl:text-2xl text-[16px] leading-9;
   }
 
-  .project__info-wrapper{
-    @apply lg:flex justify-between 
+  .project__info-wrapper {
+    @apply lg:flex justify-between;
   }
 
   .project__info-wrapper:nth-child(odd) {
-    @apply flex-row-reverse
+    @apply flex-row-reverse;
   }
+
+  .card-flag {
+    @apply relative transition-all w-8 h-16 px-2 py-3 bg-customInk hover:bg-[#e37575] cursor-pointer;
+  }
+}
+
+.card-flag {
+  clip-path: polygon(0 0, 100% 0, 100% 99%, 48% 75%, 0 100%);
+}
+
+/* .project__card-wrapper::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.3);
+} */
+
+.project__card-wrapper:hover {
+  background: rgba(0, 0, 0, 0.3);
+  transition: all 0.3s ease-in-out;
+}
+
+.project__card-wrapper:hover img {
+  transform: scale(1.1);
+}
+
+.card__flag-wrapper {
+  visibility: hidden;
+  opacity: 0;
+  transition: all 0.3s ease-in-out;
+}
+
+.project__card-wrapper:hover .card__flag-wrapper {
+  right: 36px;
+  opacity: 1;
+  visibility: visible;
 }

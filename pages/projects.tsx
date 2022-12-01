@@ -1,21 +1,10 @@
 import React from "react";
 import { LinkComponent, Project } from "../components";
-import { Project } from "../types";
-
-const project: Project[] = [
-  {
-    title: "Remotely",
-    info: "Remotely is a remote friendly-company — with our headquarters in San Francisco, a second office in LA, and a strong commitment to ensuring people can do great work here and thrive without having to live near an office. This role is open to candidates across the U.S.",
-    imgUrl: "/images/port1.png",
-    link: "https://google.com",
-  },
-  {
-    title: "Remotely",
-    info: "Remotely is a remote friendly-company — with our headquarters in San Francisco, a second office in LA, and a strong commitment to ensuring people can do great work here and thrive without having to live near an office. This role is open to candidates across the U.S.",
-    imgUrl: "/images/port1.png",
-    link: "https://google.com",
-  },
-];
+import { ProjectType } from "../types";
+import {
+  footerProject,
+  projectArray,
+} from "../components/customData/projectData";
 
 const projects = () => {
   return (
@@ -28,8 +17,8 @@ const projects = () => {
           </p>
         </div>
         <div>
-          {project.map((pr: Project, i) => (
-            <div className="project__info-wrapper mb-5">
+          {projectArray.map((pr: ProjectType, i) => (
+            <div className="project__info-wrapper mb-5" key={i}>
               <div className="lg:w-[48%] mx-auto md:w-4/5 w-full">
                 <a href="" className="block 2xl:w-[550px] w-full">
                   <img src={pr.imgUrl} alt="project" className="w-full" />
@@ -43,14 +32,19 @@ const projects = () => {
                   <p className="text-[16px]">{pr.info}</p>
                 </div>
                 <div className="mt-12 lg:mt-0">
-                  <LinkComponent url="htts://google.com" text="project" />
+                  <LinkComponent
+                    url="https://www.instagram.com/"
+                    text="project"
+                  />
                 </div>
               </div>
             </div>
           ))}
         </div>
-        <div>
-          <Project />
+        <div className="flex flex-wrap justify-evenly">
+          {footerProject.map((item, i) => (
+            <Project data={item} key={i} />
+          ))}
         </div>
       </div>
     </section>
