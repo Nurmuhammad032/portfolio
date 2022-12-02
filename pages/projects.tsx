@@ -1,5 +1,5 @@
 import React from "react";
-import { LinkComponent, Project } from "../components";
+import { Layout, LinkComponent, Project } from "../components";
 import { ProjectType } from "../types";
 import { motion } from "framer-motion";
 import {
@@ -9,19 +9,13 @@ import {
 
 const projects = () => {
   return (
-    <motion.section
-      className="app__section"
-      initial={{ opacity: 0 }}
-      animate={{ opacity: 1 }}
-      exit={{ opacity: 0 }}
-      transition={{ duration: 0.2 }}
-    >
+    <Layout delay={false}>
       <div className="main-container">
         <div className="mb-16">
           <h1 className="heading">Projects </h1>
           <p className="info mt-6">
             Some things i've been working on in the past few years:
-          </p>  
+          </p>
         </div>
         <div>
           {projectArray.map((pr: ProjectType, i) => (
@@ -55,7 +49,7 @@ const projects = () => {
           </div>
         </div>
       </div>
-    </motion.section>
+    </Layout>
   );
 };
 

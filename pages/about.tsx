@@ -1,16 +1,10 @@
 import React from "react";
 import { motion } from "framer-motion";
-import { LinkComponent } from "../components";
+import { Layout, LinkComponent } from "../components";
 
 const about = () => {
   return (
-    <motion.section
-      initial={{ opacity: 0 }}
-      animate={{ opacity: 1 }}
-      exit={{ opacity: 0 }}
-      transition={{ duration: 0.2 }}
-      className="app__section"
-    >
+    <Layout delay={false}>
       <div className="main-container">
         <div className="mb-[46px]">
           <h1 className="heading">About Me 👨‍</h1>
@@ -39,7 +33,7 @@ const about = () => {
           <LinkComponent url="contact" text="Say Hello" />
         </div>
       </div>
-    </motion.section>
+    </Layout>
   );
 };
 

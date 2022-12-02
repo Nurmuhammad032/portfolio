@@ -3,18 +3,13 @@ import { MdEmail, MdLocationPin } from "react-icons/md";
 import { BsTelegram, BsTelephoneFill } from "react-icons/bs";
 import { TbBrandTelegram } from "react-icons/tb";
 import { FaLinkedinIn } from "react-icons/fa";
+import { Layout } from "../components";
 
 const contact = () => {
   return (
-    <motion.section
-      initial={{ opacity: 0 }}
-      animate={{ opacity: 1 }}
-      exit={{ opacity: 0 }}
-      transition={{ duration: 0.2 }}
-      className="app__section"
-    >
+    <Layout delay={false}>
       <div className="main-container">
-        <div className="flex justify-between">
+        <div className="md:flex justify-between">
           <div className="w-full md:w-3/5 flex flex-col justify-between">
             <div>
               <h1 className="heading mb-4">Get quote</h1>
@@ -43,7 +38,7 @@ const contact = () => {
               </a>
             </div>
           </div>
-          <div className="w-full md:w-2/5">
+          <div className="w-full mt-5 md:mt-0 md:w-2/5">
             <div className="bg-white rounded-xl py-10 px-5">
               <div className="contact__input-wrapper">
                 <label htmlFor="name">Your name</label>
@@ -54,22 +49,21 @@ const contact = () => {
                 <input type="text" id="mail" />
               </div>
               <div className="contact__input-wrapper">
-                <label htmlFor="mail">Message</label>
-                <textarea></textarea>
+                <label htmlFor="message">Message</label>
+                <textarea id="message"></textarea>
               </div>
               <div className="text-end mt-8">
-                <button
-                  type="submit"
-                  className="px-7 py-2 text-lg bg-[#0c75ff] rounded-lg"
-                >
-                  Send Message
-                </button>
+                <div className="app__link">
+                  <button type="submit" className="">
+                    Send Message
+                  </button>
+                </div>
               </div>
             </div>
           </div>
         </div>
       </div>
-    </motion.section>
+    </Layout>
   );
 };
 

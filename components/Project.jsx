@@ -1,11 +1,18 @@
-import Link from "next/link";
-import { useEffect } from "react";
+import { motion } from "framer-motion";
 import { AiOutlineGithub } from "react-icons/ai";
 import { GoBrowser } from "react-icons/go";
 
 const Project = ({ data: { imgUrl, githubLink, link } }) => {
   return (
-    <div className="w-full mr-3 mb-3 md:w-[24rem] h-[16rem] overflow-hidden rounded-[10px] relative project__card-wrapper">
+    <motion.div
+      whileInView={{
+        opacity: [0, 1],
+        y: [30, 0],
+        transition: { type: "tween" },
+      }}
+      viewport={{ once: true }}
+      className="w-full mr-3 mb-3 md:w-[24rem] h-[16rem] overflow-hidden rounded-[10px] relative project__card-wrapper"
+    >
       <a href={link}>
         <img
           src={`${imgUrl}`}
@@ -21,7 +28,7 @@ const Project = ({ data: { imgUrl, githubLink, link } }) => {
           <GoBrowser />
         </a>
       </div>
-    </div>
+    </motion.div>
   );
 };
 
