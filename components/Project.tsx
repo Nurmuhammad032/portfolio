@@ -2,7 +2,15 @@ import { motion } from "framer-motion";
 import { AiOutlineGithub } from "react-icons/ai";
 import { GoBrowser } from "react-icons/go";
 
-const Project = ({ data: { imgUrl, githubLink, link } }) => {
+interface AppProps {
+  data: {
+    imgUrl: string;
+    githubLink: string;
+    link: string;
+  };
+}
+
+const Project = ({ data: { imgUrl, githubLink, link } }: AppProps) => {
   return (
     <motion.div
       whileInView={{
@@ -22,10 +30,10 @@ const Project = ({ data: { imgUrl, githubLink, link } }) => {
       </a>
       <div className="absolute right-0 top-0 flex space-x-4 z-10 card__flag-wrapper">
         <a href={githubLink} className="card-flag">
-          <AiOutlineGithub />
+          <AiOutlineGithub className="text-white" />
         </a>
         <a className="card-flag" href={link}>
-          <GoBrowser />
+          <GoBrowser className="text-white" />
         </a>
       </div>
     </motion.div>

@@ -17,22 +17,18 @@ export const projectArray: ProjectType[] = [
 
 export const footerProject: FooterProject[] = [
   {
-    imgUrl:
-      "https://www.bluehost.com/resources/static/58db87bf413bf464e45dd0140109199b/7f945/What-Is-Schema-Markup-and-How-To-Use-it-to-Boost-Your-Websites-SEO.jpg",
-    githubLink:
-      "https://www.bluehost.com/resources/static/58db87bf413bf464e45dd0140109199b/7f945/What-Is-Schema-Markup-and-How-To-Use-it-to-Boost-Your-Websites-SEO.jpg",
+    imgUrl: "",
+    githubLink: "",
     link: "htpps://web.com",
   },
   {
-    imgUrl:
-      "https://www.bluehost.com/resources/static/58db87bf413bf464e45dd0140109199b/7f945/What-Is-Schema-Markup-and-How-To-Use-it-to-Boost-Your-Websites-SEO.jpg",
-    githubLink: "htpps://google.com",
-    link: "htpps://google.com",
+    imgUrl: "",
+    githubLink: "",
+    link: "",
   },
   {
-    imgUrl:
-      "https://www.bluehost.com/resources/static/58db87bf413bf464e45dd0140109199b/7f945/What-Is-Schema-Markup-and-How-To-Use-it-to-Boost-Your-Websites-SEO.jpg",
-    githubLink: "htpps://google.com",
-    link: "htpps://google.com",
+    imgUrl: "",
+    githubLink: "",
+    link: "",
   },
 ];

@@ -6,7 +6,8 @@ import Router from "next/router";
 import { AnimatePresence } from "framer-motion";
 import NProgress from "nprogress";
 import { useRouter } from "next/router";
-import Head from "next/head";
+import { IoIosSunny } from "react-icons/io";
+import { BsFillMoonFill } from "react-icons/bs";
 
 export default function App({ Component, pageProps }: AppProps) {
   const router = useRouter();
@@ -47,20 +48,25 @@ export default function App({ Component, pageProps }: AppProps) {
   }, [theme]);
 
   return (
-    <div>
-      <Head>
-        <link
-          rel="stylesheet"
-          href="https://cdnjs.cloudflare.com/ajax/libs/nprogress/0.2.0/nprogress.min.css"
-          integrity="sha512-42kB9yDlYiCEfx2xVwq0q7hT4uf26FUgSIZBK8uiaEnTdShXjwr8Ip1V4xGJMg3mHkUt9nNuTDxunHF0/EgxLQ=="
-          crossOrigin="anonymous"
-          referrerPolicy="no-referrer"
-        />
-      </Head>
+    <>
       <AppBar />
-      <h1 className=" text-customBlue text-2xl font-bold absolute top-6 left-[73px]">
-        Brand
-      </h1>
+      <div className="flex justify-between items-center w-full absolute top-6 px-14">
+        <div>
+          <h1 className=" text-customBlue text-2xl font-bold">Brand</h1>
+        </div>
+        <div
+          className="hover:bg-[#143963] group w-14 h-14 center-mode transition-all cursor-pointer rounded-full"
+          onClick={() =>
+            setTheme((prev) => (prev === "light" ? "dark" : "light"))
+          }
+        >
+          {theme === "light" ? (
+            <BsFillMoonFill className="text-2xl group-hover:text-white" />
+          ) : (
+            <IoIosSunny className="text-4xl" />
+          )}
+        </div>
+      </div>
       <AnimatePresence
         mode="wait"
         initial={false}
@@ -68,6 +74,6 @@ export default function App({ Component, pageProps }: AppProps) {
       >
         <Component key={router.route} {...pageProps} />
       </AnimatePresence>
-    </div>
+    </>
   );
 }

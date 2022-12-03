@@ -6,8 +6,17 @@ import { FaLinkedinIn } from "react-icons/fa";
 import { Layout } from "../components";
 
 const contact = () => {
+  const socialWrapStyle = "contact-social center-mode group";
+  const socialIconStyle =
+    "text-2xl dark:text-white hover:text-white group-hover:text-white text-customBlue";
+
+  const sendMessage = () => {
+    const url =
+      "https://api.telegram.org/bot5921362926:AAFZejcEJvfPReAuo1yvu9Is0rUeC7ap_Wg/sendMessage?chat_id=-887854544&text=nosirov";
+  };
+
   return (
-    <Layout delay={false}>
+    <Layout delay={false} title="Contact">
       <div className="main-container">
         <div className="md:flex justify-between">
           <div className="w-full md:w-3/5 flex flex-col justify-between">
@@ -30,11 +39,11 @@ const contact = () => {
               </div>
             </div>
             <div className="flex items-center space-x-5">
-              <a href="" className="contact-social center-mode">
-                <TbBrandTelegram className="text-2xl dark:text-white text-customBlue" />
+              <a href="" className={socialWrapStyle}>
+                <TbBrandTelegram className={socialIconStyle} />
               </a>
-              <a href="" className="contact-social center-mode">
-                <FaLinkedinIn className="text-2xl dark:text-white text-customBlue" />
+              <a href="" className={socialWrapStyle}>
+                <FaLinkedinIn className={socialIconStyle} />
               </a>
             </div>
           </div>

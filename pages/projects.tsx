@@ -1,7 +1,6 @@
 import React from "react";
 import { Layout, LinkComponent, Project } from "../components";
 import { ProjectType } from "../types";
-import { motion } from "framer-motion";
 import {
   footerProject,
   projectArray,
@@ -9,7 +8,7 @@ import {
 
 const projects = () => {
   return (
-    <Layout delay={false}>
+    <Layout delay={false} title="Projects">
       <div className="main-container">
         <div className="mb-16">
           <h1 className="heading">Projects </h1>
