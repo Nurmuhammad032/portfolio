@@ -73,7 +73,7 @@
   }
   .contact__input-wrapper input,
   .contact__input-wrapper textarea {
-    @apply text-[20px] border-[#e1e1e9] rounded-md px-2 py-2 border-2 focus:border-[#0c75ff] outline-none text-[#1e205e];
+    @apply text-[20px] border-[#e1e1e9] mb-1 rounded-md px-2 py-2 border-2 focus:border-[#0c75ff] outline-none text-[#1e205e];
   }
   .contact__input-wrapper textarea {
     @apply max-h-[7rem] min-h-[6rem] bg-[#f9f9fb];
@@ -89,6 +89,10 @@
 
   .app__bar-items {
     @apply xl:h-[104px] xl:w-[104px] lg:w-[80px] lg:h-[80px] md:w-[50px] lg:p-0 p-2 w-[32px] h-[32px] md:h-[50px] dark:bg-customInk bg-[#F3F4F6] xl:rounded-2xl md:rounded-xl rounded-lg center-mode;
+  }
+
+  .app__input-validation {
+    @apply text-red-600
   }
 }
 

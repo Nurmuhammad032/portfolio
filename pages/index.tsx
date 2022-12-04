@@ -3,7 +3,7 @@ import { motion } from "framer-motion";
 
 export default function Home() {
   return (
-    <Layout delay title="Nosirov">
+    <Layout delay title="Nosirov" canonical="/contact">
       <div>
         <div className="main-container">
           <motion.h1

@@ -1,17 +1,24 @@
 import { motion } from "framer-motion";
 import Head from "next/head";
+import route from "next/router";
+
 
 interface AppProps {
   children: React.ReactNode;
   delay: boolean;
-  title: String;
+  title: string;
+  canonical: string;
 }
 
-const Layout = ({ children, delay, title }: AppProps) => {
+const Layout = ({ children, delay, title, canonical }: AppProps) => {
+  console.log(route.router);
+
+  
   return (
     <>
       <Head>
         <title>{title}</title>
+        <link rel="canonical" href={canonical} />
       </Head>
       <motion.section
         initial={{ x: -100, opacity: 0 }}

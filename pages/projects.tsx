@@ -8,7 +8,7 @@ import {
 
 const projects = () => {
   return (
-    <Layout delay={false} title="Projects">
+    <Layout delay={false} title="Projects" canonical="/contact">
       <div className="main-container">
         <div className="mb-16">
           <h1 className="heading">Projects </h1>

@@ -50,7 +50,7 @@ export default function App({ Component, pageProps }: AppProps) {
   return (
     <>
       <AppBar />
-      <div className="flex justify-between items-center w-full absolute top-6 px-14">
+      <div className="flex justify-between items-center w-full absolute top-6 xl:px-14 lg:px-10 md:px-6 px-2">
         <div>
           <h1 className=" text-customBlue text-2xl font-bold">Brand</h1>
         </div>

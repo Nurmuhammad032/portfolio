@@ -10,3 +10,15 @@ export interface FooterProject {
   githubLink: string;
   link: string;
 }
+
+export interface FormValue {
+  name: string;
+  email: string;
+  message: string;
+}
+
+export interface FormValidate {
+  isValidName: boolean;
+  isValidEmail: boolean;
+  isValidMessage: boolean;
+}

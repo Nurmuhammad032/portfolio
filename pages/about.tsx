@@ -4,7 +4,7 @@ import { Layout, LinkComponent } from "../components";
 
 const about = () => {
   return (
-    <Layout delay={false} title="About">
+    <Layout delay={false} title="About" canonical="/contact">
       <div className="main-container">
         <div className="mb-[46px]">
           <h1 className="heading">About Me 👨‍</h1>
