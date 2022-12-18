@@ -16,7 +16,7 @@ export default function Home() {
             }}
             className="xl:text-[60px] lg:text-[50px] md:text-[36px] text-[28px] font-bold xl:leading-[97px] lg:leading-[77px] md:leading-[57px] leading-[42px]"
           >
-            Hello!👋🏻 <br /> My name is Ololade <br /> I'm a Frontend{" "}
+            Hello!👋🏻 <br /> My name is Nurmuhammad <br /> I'm a Frontend{" "}
             <span
               className="font-bold"
               style={{
@@ -30,8 +30,9 @@ export default function Home() {
             </span>
           </motion.h1>
           <motion.p exit={{ opacity: 0 }} className="lg:text-2xl text-xs mt-7">
-            Let me help you grow your business and make your product look pretty
-            while at it{" "}
+            Strong in frontend development with intuitive problem-solving
+            skills. Passionate about implementing, launching new projects and
+            learning new technologies.
           </motion.p>
           <motion.div
             exit={{ y: 50, opacity: 0 }}

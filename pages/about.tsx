@@ -18,15 +18,15 @@ const about = () => {
 
         <div className="mt-6">
           <p className="info">
-            A web designer from Nigeria. I got into tech while i was student at
-            olabisi onabanjo university, Bsc Zoology. I've always been
-            fascinated with how things work. fast forward to 2 years later and
-            i'm now designing landing pages for business around the world. I{" "}
-            <br /> <br />
-            believe i've got the right skills and technologies to take your
-            online presence on the level it truly deserves. Your website should
-            be your no1 sales agent and its works 24/7, Get a quote now that's
-            best for your business.
+            A Fontend Developer from Uzbekistan. I have been learning frontend
+            technologies since November (2021) at Astrum IT Academy. <br />{" "}
+            <br />
+            Passionate on reading books, coding and playing table tennis.
+            Possesses Intermediate level of english. <br /> <br /> Skills:{" "}
+            <br />- Languages(including framework, libraries): Javascript,
+            Typescript, ReactJs, NextJs <br />
+            - Web technologies: Html5, Css (bootstrap, tailwind. preprocessor:
+            Sass) <br />- Able to quickly learn new technologiesHi
           </p>
         </div>
         <div className="mt-28">

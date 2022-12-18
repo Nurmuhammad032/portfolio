@@ -128,7 +128,7 @@ const contact = () => {
           <div className="w-full md:w-3/5 flex flex-col justify-between">
             <div>
               <h1 className="heading mb-4">Get quote</h1>
-              <p className="info">Fill up form</p>
+              <p className="info">Fill up the all form and connect me.</p>
             </div>
             <div className="">
               <div className="contact-info">
@@ -145,10 +145,18 @@ const contact = () => {
               </div>
             </div>
             <div className="flex items-center space-x-5">
-              <a href="" className={socialWrapStyle}>
+              <a
+                href="https://t.me/Nosirov_032"
+                target={"_blank"}
+                className={socialWrapStyle}
+              >
                 <TbBrandTelegram className={socialIconStyle} />
               </a>
-              <a href="" className={socialWrapStyle}>
+              <a
+                target={"_blank"}
+                href="https://www.linkedin.com/in/nurmuhammad-nosirov-104663234/"
+                className={socialWrapStyle}
+              >
                 <FaLinkedinIn className={socialIconStyle} />
               </a>
             </div>
