@@ -43,14 +43,14 @@ const projects = () => {
             </div>
           ))}
         </div>
-        {/* <div>
+        <div>
           <h1 className="project__title mt-7 mb-7">Keep Scrolling</h1>
           <div className="flex flex-wrap justify-evenly">
             {footerProject.map((item, i) => (
               <Project data={item} key={i} />
             ))}
           </div>
-        </div> */}
+        </div>
       </div>
     </Layout>
   );

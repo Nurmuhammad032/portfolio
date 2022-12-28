@@ -29,18 +29,13 @@ export const projectArray: ProjectType[] = [
 
 export const footerProject: FooterProject[] = [
   {
-    imgUrl: "",
-    githubLink: "",
-    link: "htpps://web.com",
+    imgUrl: "/images/phones.png",
+    githubLink: "https://github.com/Nurmuhammad032/Phone-Store",
+    link: "https://phone-store-two.vercel.app/checkout",
   },
   {
-    imgUrl: "",
-    githubLink: "",
-    link: "",
-  },
-  {
-    imgUrl: "",
-    githubLink: "",
-    link: "",
+    imgUrl: "/images/pokemon.png",
+    githubLink: "https://github.com/Nurmuhammad032/Pokemon",
+    link: "https://pokemon-nosirov.vercel.app/",
   },
 ];

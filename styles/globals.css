@@ -7,7 +7,7 @@
 
 @layer base {
   body {
-    @apply bg-white  dark:bg-customInk dark:text-white text-customBlack font-Space;
+    @apply bg-white  dark:bg-customInk dark:text-white text-customBlack font-Space overflow-x-hidden;
   }
 }
 
@@ -92,7 +92,7 @@
   }
 
   .app__input-validation {
-    @apply text-red-600
+    @apply text-red-600;
   }
 }
 

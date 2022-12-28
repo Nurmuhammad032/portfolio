@@ -19,7 +19,7 @@ const Project = ({ data: { imgUrl, githubLink, link } }: AppProps) => {
         transition: { type: "tween" },
       }}
       viewport={{ once: true }}
-      className="w-full mr-3 mb-3 md:w-[24rem] h-[16rem] overflow-hidden rounded-[10px] relative project__card-wrapper"
+      className="w-full mr-3 mb-3 md:w-[24rem] h-[16rem] overflow-hidden rounded-[10px] relative project__card-wrapper shadow-lg"
     >
       <a href={link}>
         <img
